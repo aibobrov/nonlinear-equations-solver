@@ -35,3 +35,14 @@ CMakeScripts
 cmake_install.cmake
 install_manifest.txt
 CTestTestfile.cmake
+solver
+.idea/dbnavigator.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/Solver.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/dictionaries/ABobrov.xml
+.idea/dictionaries/macbook.xml
+cmake-build-debug/Makefile
+cmake-build-debug/Solver.cbp
