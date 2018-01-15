@@ -1,7 +1,7 @@
 #ifndef JUSTGRAPH_SOLVINGEQUATION_H
 #define JUSTGRAPH_SOLVINGEQUATION_H
 
-#include "defines.h"
+#include "../defines.h"
 
 // bisection method
 double bisection(double left, double right);

@@ -1,5 +1,5 @@
 #include "plottingGraph.h"
-#include "defines.h"
+#include "../defines.h"
 
 void key(unsigned char c, int x, int y){
 	if (c == 27) { // key == 'ESC'

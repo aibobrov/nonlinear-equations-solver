@@ -1,12 +1,12 @@
 #include "defines.h"
-#include "solvingEquation.h"
-#include "plottingGraph.h"
+#include "solver/solvingEquation.h"
+#include "plotting/plottingGraph.h"
 
 //global initialization
 string expression_string = "cos(x)-x * e^x";
 ParserWithConsts expression;
 
-double f(double x){
+inline double f(double x){
 	return expression.Eval(&x);
 }
 

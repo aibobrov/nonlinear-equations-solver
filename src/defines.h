@@ -9,12 +9,12 @@
 
 // OpenGL
 #include <GLUT/glut.h>
-#include <OpenGL/glext.h>
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
+#include <OpenGL/OpenGL.h>
+#include <OpenGL/OpenGL.h>
+#include <OpenGL/OpenGL.h>
 
 // fParser
-#include "fparser/fparser.hh"
+#include "../lib/fparser/fparser.hh"
 
 #define MIN(a, b) ((a)<(b))? (a):(b)
 
