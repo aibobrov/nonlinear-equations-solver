@@ -1,6 +1,9 @@
 # Nonlinear equations solver and grapher.
-Solve equations by Newton's method, iteration method, hip method and bisection method.
+Equations solved by
 
-This program uses C++ library `fParser` which can be used to parse and evaluate a mathematical function from a string, C++11 threads, lambda expressions and OpenGL Utility Toolkit.
+* Newton's method; 
+* Iteration method; 
+* Chord method; 
+* Bisection method.
 
-To run you can use UNIX utility `make` or file `CMakeLists.txt` created by cross-platform system `CMake` for macOS.
+This program uses C++ library `fParser` which can be used to parse and evaluate a mathematical function from a string, C++11 threads, lambda expressions and Gnuplot Utility.
