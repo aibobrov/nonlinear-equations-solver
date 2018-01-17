@@ -5,11 +5,13 @@
 #ifndef SOLVER_PARSER_H
 #define SOLVER_PARSER_H
 
-#include "fparser.hh"
+#include "parser/fparser/fparser.hh"
 
 class Parser: public FunctionParser { 	// describing of out constants
 public:
 	Parser();
+
+	double operator()(const double& value);
 };
 
 #endif //SOLVER_PARSER_H

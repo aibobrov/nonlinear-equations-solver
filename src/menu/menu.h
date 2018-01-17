@@ -7,29 +7,29 @@
 
 #include <iostream>
 
-#include "../solver/solvers.h"
+#include "../plotter/plotter.h"
+#include "solvers.h"
+#include "profiler.h"
 
 class Menu {
 public:
-	Menu() = default;
+	Menu();
 	~Menu();
 public:
-	inline void start();
+	void start();
 private:
 	enum class Method {
 		Bisection = 1,
 		Chord = 2,
-		IterationsWithMaxIterations = 3,
-		IterationsWithoutMaxIterations = 4,
-		NewtonWithIterations = 5,
-		NewtonWithoutIterations = 6
-
+		Iterations = 3,
+		Newton = 4
 	};
 private:
 	Method _getMethod();
 	Solver *_getSolver(const std::string &expression, Method method);
 private:
 	Solver *_solver = nullptr;
+	Plotter *_plotter = nullptr;
 };
 
 #endif //SOLVER_MENU_H

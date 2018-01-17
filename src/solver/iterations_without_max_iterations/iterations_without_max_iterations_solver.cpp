@@ -15,8 +15,8 @@ double IterationsWithoutMaxIterationsSolver::solve() {
 	sx.Parse(s, "x");
 	double xn = _closeToRoot;
 	while (true) {
-		xn = sx.Eval(&xn);
-		if (fabs(xn - sx.Eval(&xn)) < _eps)
+		xn = sx(xn);
+		if (fabs(xn - sx(xn)) < _eps)
 			break;
 	}
 	return xn;

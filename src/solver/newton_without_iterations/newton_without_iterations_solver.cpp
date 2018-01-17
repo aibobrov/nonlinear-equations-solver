@@ -13,11 +13,11 @@ NewtonWithoutIterationsSolver::NewtonWithoutIterationsSolver(const std::string &
 double NewtonWithoutIterationsSolver::solve() {
 	double x = _closeToRoot, dy, dx = 1e-7;
 	double xPdx = x + dx;
-	dy = (_expression.Eval(&xPdx) - _expression.Eval(&x)) / dx;
+	dy = (_expression(xPdx) - _expression(x)) / dx;
 	double xPrevious = _closeToRoot + _eps * 10;
 	for (; fabs(xPrevious - x) > _eps;) {
 		xPrevious = x;
-		x = x - _expression.Eval(&x) / dy;
+		x = x - _expression(x) / dy;
 	}
 	return x;
 }

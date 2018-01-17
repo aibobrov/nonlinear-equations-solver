@@ -9,16 +9,16 @@ ChordSolver::ChordSolver(const std::string &expression, double leftEdge, double 
 }
 
 double ChordSolver::solve() {
-	double c = (_left * _expression.Eval(&_right) - _right * _expression.Eval(&_left)) /
-		(_expression.Eval(&_right) - _expression.Eval(&_left));
-	if (_expression.Eval(&c) == 0)
+	double c = (_left * _expression(_right) - _right * _expression(_left)) /
+		(_expression(_right) - _expression(_left));
+	if (_expression(c) == 0)
 		return c;
 	while (true) {
-		c = (_left * _expression.Eval(&_right) - _right * _expression.Eval(&_left)) /
-			(_expression.Eval(&_right) - _expression.Eval(&_left));
+		c = (_left * _expression(_right) - _right * _expression(_left)) /
+			(_expression(_right) - _expression(_left));
 		if (c == _left || c == _right)
 			break;
-		if (_expression.Eval(&c) * _expression.Eval(&_right) < 0)
+		if (_expression(c) * _expression(_right) < 0)
 			_left = c;
 		else
 			_right = c;

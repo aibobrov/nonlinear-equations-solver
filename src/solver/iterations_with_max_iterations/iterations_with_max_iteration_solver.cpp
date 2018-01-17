@@ -18,8 +18,8 @@ double IterationsWithMaxIterationSolver::solve() {
 	xn = _closeToRoot;
 	while (true) {
 		i++;
-		xn = sx.Eval(&xn);
-		if (fabs(xn - sx.Eval(&xn)) < _eps || i >= _amountIterations)
+		xn = sx(xn);
+		if (fabs(xn - sx(xn)) < _eps || i >= _amountIterations)
 			break;
 	}
 	return xn;

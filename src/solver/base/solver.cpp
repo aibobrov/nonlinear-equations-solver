@@ -7,3 +7,6 @@ Solver::Solver(const std::string &expression) {
 	_expression.Parse(expression, "x");
 	_expression.Optimize();
 }
+double Solver::operator()(const double &value) {
+	return _expression(value);
+}
