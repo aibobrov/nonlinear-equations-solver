@@ -35,10 +35,8 @@ Menu::Method Menu::_getMethod() {
 	std::cout << "Choose the method for solving equations:" << std::endl;
 	std::cout << "\t1)Bisection method\n"
 		"\t2)Chord method\n"
-		"\t3)Iteration method with max iterations\n"
-		"\t4)Iteration method without max iterations\n"
-		"\t5)Newton's method with max iterations"
-		"\t6)Newton's method without max iterations"
+		"\t3)Iteration method with/without max iterations\n"
+		"\t4)Newton's method with/without max iterations\n"
 	          << std::endl;
 	std::cout << "Type choosen number" << std::endl;
 	int value;
@@ -103,4 +101,3 @@ Solver *Menu::_getSolver(const std::string &expression, Method method) {
 			throw std::invalid_argument("Incorrent method");
 	}
 }
-
