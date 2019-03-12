@@ -36,6 +36,8 @@ set(SOURCE_FILES
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
+find_package(Threads)
 find_package(Boost REQUIRED COMPONENTS system iostreams)
 include_directories(${Boost_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} )
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
